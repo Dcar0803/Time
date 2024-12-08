@@ -1,4 +1,5 @@
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class DateTimeFunctions {
 	
@@ -13,5 +14,14 @@ public class DateTimeFunctions {
 		return LocalDateTime.now();
 		
 	}//end of getCurrentDateTime
+	
+	
+	 public static String convertDateToISO8061(LocalDateTime dateTime) {
+	        
+		 ZonedDateTime utcDateTime = dateTime.atZone(ZoneId.systemDefault()).withZoneSameInstant(ZoneOffset.UTC);
+	        
+	        return utcDateTime.format(DateTimeFormatter.ISO_INSTANT);
+	   
+	 }//end of convertDateToISO8061
 
 }//end of DateTimeFunctions
