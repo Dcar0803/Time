@@ -25,5 +25,19 @@ class Testing {
 		 assertEquals("2024-12-03T14:10:31Z", isoDate, "Date should be formatted as ISO 8061 UTC string");
 	    
 	 }//end of testConvertDateToISO8061
+	 
+	 
+	 @Test
+	    void testDaysBetweenDates() {
+		 
+	        LocalDate startDate = LocalDate.of(2024, 12, 1);
+	        
+	        LocalDate endDate = LocalDate.of(2024, 12, 5);
+	        
+	        long days = DateTimeFunctions.daysBetweenDates(startDate, endDate);
+	        
+	        assertEquals(4, days, "There should be 4 days between 2024-12-01 and 2024-12-05");
+	   
+	 }//end of testDaysBetweenDates 
 
 }//end of Testing class 
