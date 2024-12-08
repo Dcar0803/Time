@@ -31,5 +31,12 @@ public class DateTimeFunctions {
 	        return utcDateTime.format(DateTimeFormatter.ISO_INSTANT);
 	   
 	 }//end of convertDateToISO8061
+	 
+	 
+	 public static long daysBetweenDates(LocalDate start, LocalDate end) {
+	        
+		 return Duration.between(start.atStartOfDay(), end.atStartOfDay()).toDays();
+	    
+	 }//end of datsBetweenDates method
 
 }//end of DateTimeFunctions
