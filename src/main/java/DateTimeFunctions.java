@@ -33,6 +33,15 @@ public class DateTimeFunctions {
 	 }//end of convertDateToISO8061
 	 
 	 
+	 /**
+	     * Returns the number of days between two LocalDate objects.
+	     *
+	     * @param start The start date
+	     * @param end   The end date
+	     * @return The number of days between start and end
+	     */
+	 
+	 
 	 public static long daysBetweenDates(LocalDate start, LocalDate end) {
 	        
 		 return Duration.between(start.atStartOfDay(), end.atStartOfDay()).toDays();
